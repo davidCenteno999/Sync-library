@@ -14,7 +14,7 @@ void semaphore_init(semaphore *s, int num) {
 
 // Funcion de wait, que espera a que el valor del semaforo sea mayor a 0
 // y luego lo disminuye en 1
-void wait(semaphore *s) {
+void wait_semaphore(semaphore *s) {
   pthread_mutex_lock(&s->mutex);
   s->value--;
   if (s->value < 0) {
@@ -25,7 +25,7 @@ void wait(semaphore *s) {
 
 // La funcion signal, incrementa el valor del semaforo en 1
 // y luego notifica a los hilos que estan esperando
-void signal(semaphore *s) {
+void signal_semaphore(semaphore *s) {
   pthread_mutex_lock(&s->mutex);
   s->value++;
   if (s->value <= 0) {

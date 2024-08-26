@@ -17,7 +17,7 @@ typedef struct {
 
 void *f1(void* args) {
 
-    wait(&sem);
+    wait_semaphore(&sem);
      args_f1 *t_args = (args_f1*)args;
     printf("Hilo %d\n", t_args->thread_id);
     printf("Operacion: %c || Operando 1: %d || Operando 2: %d \n",
@@ -30,7 +30,7 @@ void *f1(void* args) {
     }
     printf("Resultado: %d\n", result);
     sleep(1);
-    signal(&sem);
+    signal_semaphore(&sem);
     free(args);  // Liberar la memoria asignada para el argumento
     return NULL;
 }
