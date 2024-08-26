@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
-#include "semaphore.h"
+#include "sync.h"
 
 semaphore sem;  // Cambiado de puntero a instancia
 int num = 0;

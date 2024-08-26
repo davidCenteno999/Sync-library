@@ -4,6 +4,8 @@
 
 #include <pthread.h>
 
+#include <pthread.h>
+
 typedef struct {
   int value;
   pthread_cond_t cond;
@@ -13,9 +15,9 @@ typedef struct {
 
 
 void semaphore_init(semaphore *s, int num);
-void wait(semaphore *s);
-void signal(semaphore *s);
-void sem_delete(semaphore *s);
+void wait_semaphore(semaphore *s);
+void signal_semaphore(semaphore *s);
+void delete_semaphore(semaphore *s);
 
 typedef struct {
   pthread_mutex_t lock;

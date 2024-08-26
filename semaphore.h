@@ -12,9 +12,9 @@ typedef struct {
 
 
 void semaphore_init(semaphore *s, int num);
-void wait_semaphore(semaphore *s);
-void signal_semaphore(semaphore *s);
-void sem_delete(semaphore *s);
+void wait(semaphore *s);
+void signal(semaphore *s);
+void delete_semaphore(semaphore *s);
 
 
 #endif // SEMAPHORE_H
