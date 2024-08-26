@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <pthread.h>
-#include "rwlock.h"
+#include "sync.h"
 
 rwlock_t lock;
 int data = 0;
@@ -29,15 +29,6 @@ int main() {
   w1, w2, w3 ,w4 ,w5 ,w6;
 
   rwlock_init(&lock);
-
-  /*printf("Indique cuantos hilos quiere usar: ");
-  int num;
-  sscanf("%d", num);
-
-  for(int i = 0; i < num) {
-    if 
-  }*/
-
 
   pthread_create(&r1, NULL, reader, (void *)1);
   pthread_create(&r2, NULL, reader, (void *)2);

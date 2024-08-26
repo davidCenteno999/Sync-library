@@ -1,6 +1,8 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 #include "semaphore.h"
 
 semaphore sem;  // Cambiado de puntero a instancia
