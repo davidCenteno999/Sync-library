@@ -10,7 +10,7 @@
 ## Installation
 1. Clone the repository:
 
-git clone https://github.com/username/WeatherForecastApp.git
+git clone https://github.com/davidCenteno999/Sync-library.git
 
 cd Sync-library
 
