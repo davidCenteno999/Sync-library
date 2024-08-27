@@ -33,5 +33,5 @@ gcc ejemplo_rwlock.c sync.c -o ejemplo_rwlock
 
 Thanks to the following contributors:
 - [Gabriel Nunez](https://github.com/gabon04)
-- [David Centeno](https://github.com/contributor2)
+- [David Centeno](https://github.com/davidCenteno99)
 - [Jose Andres Ramirez](https://github.com/characha01)
