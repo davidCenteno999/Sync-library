@@ -22,7 +22,7 @@ Mutex:
 
 Semaphore:
 - gcc example_semaphore.c sync.c -o example_semaphore
-./example_semaphore
+- ./example_semaphore
 
 Barrera:
 - gcc ejemplo_barrera.c sync.c -o ejemplo_barrera
