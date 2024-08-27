@@ -93,3 +93,30 @@ void write_unlock(rwlock_t *rw) {
   }
   pthread_mutex_unlock(&rw->lock);
 }
+
+//-------------------------------Barrera-------------------------------//
+
+void barrera_init(Barrera* barrier, int limite) {
+  pthread_mutex_init(&barrier->mutex, NULL);
+  pthread_cond_init(&barrier->hilos, NULL);
+  barrier->contador = 0;
+  barrier->limite = limite;
+}
+
+void barrera_wait(Barrera* barrier) {
+  pthread_mutex_lock(&barrier->mutex);
+  barrier->contador++;
+
+  if (barrier->contador < barrier->limite) {
+      pthread_cond_wait(&barrier->hilos, &barrier->mutex);
+  } else {
+      pthread_cond_broadcast(&barrier->hilos);
+      barrier->contador = 0;
+  }
+  pthread_mutex_unlock(&barrier->mutex);
+}
+
+void barrera_destroy(Barrera* barrier) {
+  pthread_mutex_destroy(&barrier->mutex);
+  pthread_cond_destroy(&barrier->hilos);
+}
