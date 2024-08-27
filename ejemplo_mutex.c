@@ -1,6 +1,7 @@
 #include <math.h>
 #include <pthread.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 pthread_mutex_t mutex;
 int primos=0;
@@ -22,7 +23,7 @@ void *calcPrimos(void *arg) {
 }
 
 int main(void) {
-  printf("Hello World\n");
+  //printf("Hello World\n");
 
   int numeros;
 

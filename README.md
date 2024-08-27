@@ -16,6 +16,10 @@ cd Sync-library
 
 
 ## Usage
+Mutex
+gcc ejemplo_mutex.c -o ejemplo_mutex
+./example_semaphore
+
 Semaphore
 gcc example_semaphore.c sync.c -o example_semaphore
 ./example_semaphore
